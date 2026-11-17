@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jeevitha V – AI & Data Science Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#EEF2F8;--card:#FFFFFF;--ink:#16203B;--muted:#56617E;--line:#D3DAE8;--p1:#4B3FD6;--p2:#0E9F8A;--p3:#C46A12;--tint:#E3E8F5;color-scheme:light;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#0F1426;--card:#171E36;--ink:#E7EBF8;--muted:#9AA5C6;--line:#2A3355;--p1:#8E86FF;--p2:#38D1B8;--p3:#F0A04B;--tint:#1C2442;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#0F1426;--card:#171E36;--ink:#E7EBF8;--muted:#9AA5C6;--line:#2A3355;--p1:#8E86FF;--p2:#38D1B8;--p3:#F0A04B;--tint:#1C2442;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 Figtree,system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque",Georgia,sans-serif;line-height:1.1;margin:0}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--p1);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0;gap:16px;flex-wrap:wrap}
+nav b{font:800 20px "Bricolage Grotesque",sans-serif}
+nav div{display:flex;gap:20px;flex-wrap:wrap}
+nav a{text-decoration:none;color:var(--muted);font-weight:500}
+nav a:hover{color:var(--ink)}
+.hero{display:grid;grid-template-columns:1fr 1.1fr;gap:32px;align-items:center;padding:36px 0 64px}
+.hero h1{font-size:clamp(46px,8vw,92px);font-weight:800;letter-spacing:-.03em}
+.hero p{color:var(--muted);max-width:46ch;font-size:19px;margin:20px 0 28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--ink)}
+.btn.main{background:var(--ink);color:var(--paper)}
+.graph{position:relative;background:var(--card);border:1px solid var(--line);border-radius:24px;overflow:hidden}
+#cv{width:100%;height:420px;display:block;touch-action:pan-y}
+.legend{display:flex;gap:16px;flex-wrap:wrap;padding:12px 18px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px}
+section{padding:56px 0;border-top:1px solid var(--line)}
+section>.wrap>h2{font-size:clamp(30px,4.5vw,44px);margin-bottom:28px;letter-spacing:-.02em}
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:40px}
+.stats{display:grid;gap:14px;align-content:start}
+.stat{background:var(--tint);border-radius:16px;padding:16px 20px}
+.stat b{font:800 32px "Bricolage Grotesque",sans-serif;display:block}
+.stat span{color:var(--muted);font-size:15px}
+.proj{display:grid;grid-template-columns:200px 1fr;gap:28px;padding:30px 0;border-bottom:1px solid var(--line)}
+.proj:last-child{border:0}
+.proj .meta{color:var(--muted);font-size:15px}
+.proj .meta b{display:block;color:var(--ink);font:700 18px "Bricolage Grotesque",sans-serif;margin-bottom:4px}
+.bar{width:44px;height:6px;border-radius:3px;margin-bottom:12px}
+.proj h3{font-size:28px;margin-bottom:12px}
+.proj ul{margin:0 0 14px;padding-left:20px}
+.proj li{margin-bottom:6px;max-width:68ch}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin:0;padding:0;list-style:none}
+.tags li{background:var(--tint);border-radius:999px;padding:3px 12px;font-size:14px;margin:0}
+.proj a.link{font-weight:600;text-decoration-thickness:2px;text-underline-offset:4px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px}
+.card h3{font-size:21px;margin-bottom:6px}
+.card p,.card li{color:var(--muted);margin:0 0 6px;font-size:16px}
+.card ul{padding-left:18px;margin:8px 0 0}
+.card .big{font:800 30px "Bricolage Grotesque",sans-serif;color:var(--p1)}
+.skills dt{font:700 17px "Bricolage Grotesque",sans-serif;margin-top:16px}
+.skills dd{margin:6px 0 0}
+footer{padding:56px 0 64px;border-top:1px solid var(--line)}
+footer h2{font-size:clamp(34px,6vw,60px);margin-bottom:18px;letter-spacing:-.03em}
+footer p{color:var(--muted);margin:0 0 22px}
+footer small{display:block;margin-top:36px;color:var(--muted)}
+@media (max-width:820px){.hero,.about,.proj{grid-template-columns:1fr}.proj{gap:10px}#cv{height:340px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav aria-label="Main"><b>Jeevitha V</b><div><a href="#about">About</a><a href="#projects">Projects</a><a href="#learning">Learning</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div></nav>
+
+<header class="hero">
+<div>
+<h1>Jeevitha V</h1>
+<p>B.Tech student in AI and Data Science at Dr. N.G.P. Institute of Technology, Coimbatore. I build models and apps that turn messy data into useful decisions, from drug–microbiome graphs to personal finance.</p>
+<div class="btns"><a class="btn main" href="#projects">See my projects</a><a class="btn" href="mailto:jeevithavairaperumal572@gmail.com">Email me</a></div>
+</div>
+<div class="graph">
+<canvas id="cv" role="img" aria-label="Interactive graph linking my three projects to the tools used in each"></canvas>
+<div class="legend"><span><i style="background:var(--p1)"></i>MicroBioTransformer</span><span><i style="background:var(--p2)"></i>Finance Coach</span><span><i style="background:var(--p3)"></i>Interior Design AI</span></div>
+</div>
+</header>
+</div>
+
+<section id="about"><div class="wrap">
+<h2>About</h2>
+<div class="about">
+<div>
+<p>I’m an AI and Data Science undergraduate with a strong base in programming, data structures and machine learning. I like solving real problems with technology, and I learn quickly, both alone and in a team.</p>
+<p>My work so far spans biomedical AI, a full-stack fintech assistant and a generative design tool. One of my projects was presented at an IEEE conference and selected for Scopus indexing.</p>
+</div>
+<div class="stats">
+<div class="stat"><b>8.98</b><span>CGPA, B.Tech AI &amp; Data Science</span></div>
+<div class="stat"><b>250+</b><span>DSA problems solved on LeetCode</span></div>
+<div class="stat"><b>IEEE</b><span>Paper presented, selected for Scopus indexing</span></div>
+</div>
+</div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+<h2>Projects</h2>
+
+<article class="proj">
+<div class="meta"><div class="bar" style="background:var(--p1)"></div><b>MicroBioTransformer</b>Biomedical AI, 2026</div>
+<div>
+<h3>Modeling how drugs interact with the microbiome</h3>
+<ul>
+<li>Designed a heterogeneous Graph Neural Network combined with a transformer-based model for drug–microbiome interactions.</li>
+<li>Predicted toxicity outcomes with improved accuracy, supporting safer drug discovery and personalized medicine.</li>
+<li>Presented at an IEEE conference and selected for Scopus indexing.</li>
+</ul>
+<ul class="tags"><li>Graph Neural Networks</li><li>Transformers</li><li>Python</li></ul>
+<p><a class="link" href="https://github.com/JeevithaVairaperumal">View on GitHub</a></p>
+</div>
+</article>
+
+<article class="proj">
+<div class="meta"><div class="bar" style="background:var(--p2)"></div><b>AI Personal Finance Coach</b>Fintech, 2026</div>
+<div>
+<h3>An assistant that plans your savings and budget</h3>
+<ul>
+<li>Built an end-to-end finance assistant with Spring Boot, PostgreSQL and React for personalized financial planning.</li>
+<li>Used OCR and external APIs to track expenses and categorize transactions in real time.</li>
+<li>Applied predictive analytics and recommendation logic to guide savings, budgeting and investment decisions.</li>
+<li>Reduces manual errors and gives users clear, actionable insights.</li>
+</ul>
+<ul class="tags"><li>Spring Boot</li><li>PostgreSQL</li><li>React</li><li>OCR</li></ul>
+</div>
+</article>
+
+<article class="proj">
+<div class="meta"><div class="bar" style="background:var(--p3)"></div><b>AI Interior Design</b>Creative AI, 2025</div>
+<div>
+<h3>Redesign a room from a single photo</h3>
+<ul>
+<li>Integrated Stable Diffusion into a Flask web module that generates realistic interior suggestions from uploaded room images.</li>
+<li>Applied OpenCV preprocessing and CNN-based feature extraction to read layout, lighting and furniture placement.</li>
+<li>Delivered a web interface that shows AI-generated recommendations in real time.</li>
+</ul>
+<ul class="tags"><li>Stable Diffusion</li><li>Flask</li><li>OpenCV</li><li>CNN</li></ul>
+</div>
+</article>
+</div></section>
+
+<section id="learning"><div class="wrap">
+<h2>Learning and activity</h2>
+<div class="cols">
+<div class="card"><h3>Certifications</h3><ul>
+<li>Human–Computer Interaction, NPTEL (Elite + Gold, 93%)</li>
+<li>Data Structures and Algorithm Design, NPTEL (Elite + Silver, 65%)</li>
+<li>AWS: Foundations of Prompt Engineering</li>
+<li>MongoDB Basics for Students</li>
+<li>JavaScript Training, EduPyramids and SINE IIT Bombay (2026), score 77.5%</li></ul></div>
+<div class="card"><h3>Achievements</h3><ul>
+<li>Solved 250+ DSA problems on LeetCode for placement preparation.</li>
+<li>Presented the MicroBioTransformer paper at IEEE; selected for Scopus indexing.</li>
+<li>Completed a 15-day internship at NextSkill Technology.</li></ul></div>
+<div class="card"><h3>Hackathons and workshops</h3><ul>
+<li>24-hour hackathon at Sri Sakthi College, Coimbatore</li>
+<li>HackHazards, Datathon and Innova Hack (online)</li>
+<li>Google ADK Workshop on AI application development</li>
+<li>Workshop on the SDLC: Server Script, Figma and Agile</li></ul></div>
+</div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+<h2>Skills and education</h2>
+<div class="cols">
+<dl class="skills card" style="margin:0">
+<dt>Languages</dt><dd>Python, Java, C, R, MySQL</dd>
+<dt>Web and tools</dt><dd>HTML, CSS, JavaScript, React.js, Spring Boot, Git, GitHub, VS Code</dd>
+<dt>Libraries</dt><dd>NumPy</dd>
+<dt>Core subjects</dt><dd>DSA, OOP, DBMS, Mathematics</dd>
+<dt>Working style</dt><dd>Problem solving, logical thinking, willingness to learn</dd>
+</dl>
+<div class="card">
+<h3>Education</h3>
+<p><b>B.Tech, AI and Data Science</b> (2024–2028)<br>Dr. N.G.P. Institute of Technology, Coimbatore</p>
+<p class="big">CGPA 8.98</p>
+<ul><li>Class XII, State Board (2023–2024): 94%</li><li>Class X, State Board (2021–2022): 96%</li></ul>
+</div>
+</div>
+</div></section>
+
+<footer id="contact"><div class="wrap">
+<h2>Let’s build something.</h2>
+<p>I’m open to internships and projects in AI, data science and full-stack development.</p>
+<div class="btns">
+<a class="btn main" href="mailto:jeevithavairaperumal572@gmail.com">jeevithavairaperumal572@gmail.com</a>
+<a class="btn" href="https://github.com/JeevithaVairaperumal">GitHub</a>
+<a class="btn" href="https://linkedin.com/in/jeevitha-vairaperumal-776256328">LinkedIn</a>
+<a class="btn" href="tel:+919080598903">+91 90805 98903</a>
+</div>
+<small>Coimbatore, Tamil Nadu</small>
+</div></footer>
+
+<script>
+(function(){
+var cv=document.getElementById('cv'),ctx=cv.getContext('2d');
+var cs=function(n){return getComputedStyle(document.documentElement).getPropertyValue(n).trim()};
+// g: group 1,2,3 are projects; 0 shared
+var N=[
+{l:'MicroBioTransformer',x:.27,y:.3,g:1,h:1},{l:'Finance Coach',x:.74,y:.27,g:2,h:1},{l:'Interior Design AI',x:.5,y:.76,g:3,h:1},
+{l:'GNN',x:.08,y:.14,g:1},{l:'Transformers',x:.1,y:.52,g:1},{l:'Python',x:.3,y:.56,g:0},
+{l:'React',x:.93,y:.12,g:2},{l:'Spring Boot',x:.94,y:.45,g:2},{l:'PostgreSQL',x:.68,y:.08,g:2},{l:'OCR',x:.76,y:.55,g:2},
+{l:'Flask',x:.22,y:.88,g:3},{l:'Stable Diffusion',x:.78,y:.86,g:3},{l:'OpenCV',x:.55,y:.52,g:3},{l:'CNN',x:.37,y:.9,g:3}];
+var E=[[0,3],[0,4],[0,5],[2,5],[1,6],[1,7],[1,8],[1,9],[2,10],[2,11],[2,12],[2,13]];
+var W,H,act=-1,mx=-1,my=-1,t=0,still=matchMedia('(prefers-reduced-motion:reduce)').matches;
+function size(){var d=devicePixelRatio||1;W=cv.clientWidth;H=cv.clientHeight;cv.width=W*d;cv.height=H*d;ctx.setTransform(d,0,0,d,0,0)}
+function pos(n,i){var a=still?0:6;return[n.x*(W-90)+45+Math.sin(t/900+i*1.7)*a,n.y*(H-50)+25+Math.cos(t/1100+i*2.3)*a]}
+function col(g){return g==1?cs('--p1'):g==2?cs('--p2'):g==3?cs('--p3'):cs('--muted')}
+function draw(){
+t=performance.now();ctx.clearRect(0,0,W,H);
+var P=N.map(pos),lit={};
+if(act>=0){lit[act]=1;E.forEach(function(e){if(e[0]==act)lit[e[1]]=1;if(e[1]==act)lit[e[0]]=1})}
+var line=cs('--line');
+E.forEach(function(e){var a=P[e[0]],b=P[e[1]],on=act<0||lit[e[0]]&&lit[e[1]];
+ctx.globalAlpha=on?1:.25;ctx.strokeStyle=act>=0&&on?col(N[e[0]].g):line;ctx.lineWidth=act>=0&&on?2.5:1.5;
+ctx.beginPath();ctx.moveTo(a[0],a[1]);ctx.lineTo(b[0],b[1]);ctx.stroke()});
+ctx.font='500 13px Figtree,system-ui,sans-serif';ctx.textBaseline='middle';
+N.forEach(function(n,i){var p=P[i],on=act<0||lit[i],r=n.h?13:7;
+ctx.globalAlpha=on?1:.3;ctx.fillStyle=col(n.g);
+ctx.beginPath();ctx.arc(p[0],p[1],i==act?r+3:r,0,6.283);ctx.fill();
+ctx.fillStyle=cs('--ink');ctx.font=(n.h?'700 14px ':'500 13px ')+'Figtree,system-ui,sans-serif';
+var w=ctx.measureText(n.l).width,tx=p[0]+r+6;if(tx+w>W-6)tx=p[0]-r-6-w;
+ctx.fillText(n.l,tx,p[1])});
+ctx.globalAlpha=1;
+if(!still)requestAnimationFrame(draw)}
+function pick(e){var r=cv.getBoundingClientRect();mx=e.clientX-r.left;my=e.clientY-r.top;
+var best=-1,bd=900;N.forEach(function(n,i){var p=pos(n,i),d=(p[0]-mx)*(p[0]-mx)+(p[1]-my)*(p[1]-my);if(d<bd){bd=d;best=i}});act=best;if(still)draw()}
+cv.addEventListener('pointermove',pick);cv.addEventListener('pointerdown',pick);
+cv.addEventListener('pointerleave',function(){act=-1;if(still)draw()});
+addEventListener('resize',function(){size();if(still)draw()});
+matchMedia('(prefers-color-scheme:dark)').addEventListener&&matchMedia('(prefers-color-scheme:dark)').addEventListener('change',function(){if(still)draw()});
+size();draw();
+})();
+</script>
+</body>
+</html>
